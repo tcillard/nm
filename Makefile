@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/06/18 14:53:04 by tcillard          #+#    #+#              #
+#    Updated: 2021/06/18 14:53:05 by tcillard         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SCURSOR = \033[s
 RCURSOR = \033[u
 ERASEL = \033[K
@@ -10,7 +22,6 @@ OBJECTS_DIR = ./objects
 NM_OBJECTS_DIR = $(OBJECTS_DIR)
 
 NM_FILES = nm.c \
-	debug.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources

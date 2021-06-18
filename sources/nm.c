@@ -29,7 +29,7 @@ void    getFileContentAndInitElfStruct(char *path) {
     elf = initElfStruct();
     fd = open(path, O_RDONLY);
     fstat(fd, &stat);
-    file = mmap(NULL, stat.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
+    file = mmap(NULL, stat.st_size, PROT_READ, MA§1P_PRIVATE, fd, 0);
     close(fd);
     elf->size = stat.st_size;
     if (file[0] != 0x7f || file[1] != 'E' || file[2] != 'L' || file[3] != 'F') {
