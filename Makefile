@@ -6,7 +6,7 @@
 #    By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/18 14:53:04 by tcillard          #+#    #+#              #
-#    Updated: 2021/06/18 14:53:05 by tcillard         ###   ########.fr        #
+#    Updated: 2021/06/19 17:18:36 by tcillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,10 @@ OBJECTS_DIR = ./objects
 NM_OBJECTS_DIR = $(OBJECTS_DIR)
 
 NM_FILES = nm.c \
+	checkElf.c \
+	treatSectionTable32Bits.c \
+	treatSectionTable64Bits.c \
+	structTools.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources
