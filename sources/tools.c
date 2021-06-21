@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkElf.c                                         :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/19 15:29:45 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/21 18:14:07 by tcillard         ###   ########.fr       */
+/*   Created: 2021/06/20 16:08:55 by tcillard          #+#    #+#             */
+/*   Updated: 2021/06/20 16:09:24 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "nm.h"
+int		ft_strcmp(const char *s1, const char *s2)
+{
+	int		i;
 
-int     handleElfErrors() {
-    return (true);
-}
-
-void    checkAndDisplayFileContent() {
-    t_elf *elf;
-
-    elf = getFileStruct();
-    if (!handleElfErrors())
-        return ;
-    if (elf->arch == B_64)
-        displaySymboles64(elf->elfHeader64);
-    else if (elf->arch == B_32)
-        displaySectionTable32B(elf->elfHeader32);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

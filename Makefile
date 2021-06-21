@@ -6,7 +6,7 @@
 #    By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/18 14:53:04 by tcillard          #+#    #+#              #
-#    Updated: 2021/06/19 17:18:36 by tcillard         ###   ########.fr        #
+#    Updated: 2021/06/21 16:12:52 by tcillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,20 +25,21 @@ NM_FILES = nm.c \
 	checkElf.c \
 	treatSectionTable32Bits.c \
 	treatSectionTable64Bits.c \
-	structTools.c
+	structTools.c \
+	tools.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources
 OBJECTS_FILES = $(NM_FILES:.c=.o)
 OBJECTS_PATH = $(addprefix $(OBJECTS_DIR)/, $(OBJECTS_FILES))
 
+
 $(OBJECTS_DIR)/%.o: $(SOURCE_DIR)/%.c
-	@ echo "$(RCURSOR)$(ERASEL)\c"
-	@ echo "$(SCURSOR)$(@F) \c"
-	@ gcc $(FLAGS) $(INCLUDE_DIR) -c $< -o $@
+	gcc $(FLAGS) $(INCLUDE_DIR) -c $< -o $@
+
 
 $(NAME): dir $(OBJECTS_PATH)
-	@ gcc $(FLAGS) $(INCLUDE_DIR) -o $(NAME) $(OBJECTS_PATH)
+	gcc $(FLAGS) $(INCLUDE_DIR) -o $(NAME) $(OBJECTS_PATH)
 	@ echo "\nDONE"
  
 .PHONY: all clean fclean re
