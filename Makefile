@@ -6,7 +6,7 @@
 #    By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/18 14:53:04 by tcillard          #+#    #+#              #
-#    Updated: 2021/06/21 16:12:52 by tcillard         ###   ########.fr        #
+#    Updated: 2021/06/23 19:39:44 by tcillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ NM_FILES = nm.c \
 	treatSectionTable32Bits.c \
 	treatSectionTable64Bits.c \
 	structTools.c \
-	tools.c
+	tools.c \
+	symbolesListTools.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources

@@ -1,64 +1,110 @@
-name = .symtab
-name = .strtab
-number of Symboles: 88
 crtstuff.c
 deregister_tm_clones
+value converted: 00000000000007d0
 register_tm_clones
+value converted: 0000000000000810
 __do_global_dtors_aux
+value converted: 0000000000000860
 completed.7698
+value converted: 0000000000202020
 __do_global_dtors_aux_fini_array_entry
+value converted: 0000000000201d80
 frame_dummy
+value converted: 00000000000008a0
 __frame_dummy_init_array_entry
+value converted: 0000000000201d78
 nm.c
 checkElf.c
 treatSectionTable32Bits.c
 treatSectionTable64Bits.c
 structTools.c
 elf.3570
+value converted: 0000000000202040
 tools.c
 crtstuff.c
 __FRAME_END__
+value converted: 00000000000014d4
 fstat
+value converted: 00000000000010e0
 __init_array_end
+value converted: 0000000000201d80
 _DYNAMIC
+value converted: 0000000000201d88
 __init_array_start
+value converted: 0000000000201d78
 __GNU_EH_FRAME_HDR
+value converted: 000000000000113c
 _GLOBAL_OFFSET_TABLE_
+value converted: 0000000000201f78
 __libc_csu_fini
+value converted: 00000000000010d0
 freeElfHeader
+value converted: 0000000000000e78
+treatSymboles
+value converted: 0000000000000b35
 _ITM_deregisterTMCloneTable
 data_start
+value converted: 0000000000202000
 checkAndDisplayFileContent
+value converted: 000000000000093b
 handleElfErrors
+value converted: 0000000000000930
 puts@@GLIBC_2.2.5
+ft_strlen
+value converted: 0000000000000f71
 _edata
+value converted: 0000000000202010
 getFileStruct
+value converted: 0000000000000c89
 _fini
+value converted: 00000000000010f0
 __stack_chk_fail@@GLIBC_2.4
 mmap@@GLIBC_2.2.5
 displaySectionTable32B
+value converted: 00000000000009a2
 printf@@GLIBC_2.2.5
 mapFileContentAndSaveInStruct
+value converted: 0000000000000ce0
 close@@GLIBC_2.2.5
 initElfStruct
+value converted: 0000000000000c96
 __libc_start_main@@GLIBC_2.2.5
 __data_start
-displaySymboles64
+value converted: 0000000000202000
 __gmon_start__
 __dso_handle
+value converted: 0000000000202008
 _IO_stdin_used
+value converted: 00000000000010fc
 __libc_csu_init
+value converted: 0000000000001060
+malloc@@GLIBC_2.2.5
 __fxstat@@GLIBC_2.2.5
 _end
+value converted: 0000000000202060
 _start
+value converted: 00000000000007a0
+ft_strmap
+value converted: 0000000000000f9f
 __bss_start
+value converted: 0000000000202010
 munmap@@GLIBC_2.2.5
 main
+value converted: 00000000000008aa
 ft_strcmp
+value converted: 0000000000000ee0
+convertSymbolesValue
+value converted: 0000000000000a80
 open@@GLIBC_2.2.5
 __fstat
+value converted: 00000000000010e0
+treatAndDisplaySymboles64
+value converted: 0000000000000c2f
 __TMC_END__
+value converted: 0000000000202010
 _ITM_registerTMCloneTable
 getSectionByName
+value converted: 00000000000009ad
 __cxa_finalize@@GLIBC_2.2.5
 _init
+value converted: 00000000000006d8
