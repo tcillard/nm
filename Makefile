@@ -6,7 +6,7 @@
 #    By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/18 14:53:04 by tcillard          #+#    #+#              #
-#    Updated: 2021/06/23 19:39:44 by tcillard         ###   ########.fr        #
+#    Updated: 2021/06/24 22:59:40 by tcillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ ERASEL = \033[K
 
 NAME=ft_nm
 
-FLAGS = -Wall -Wextra -Werror -I
+FLAGS = -Wall -Wextra -Werror
 
 OBJECTS_DIR = ./objects
 NM_OBJECTS_DIR = $(OBJECTS_DIR)
@@ -29,7 +29,7 @@ NM_FILES = nm.c \
 	tools.c \
 	symbolesListTools.c
 
-INCLUDE_DIR = ./includes
+INCLUDE_DIR = -I ./includes
 SOURCE_DIR = ./sources
 OBJECTS_FILES = $(NM_FILES:.c=.o)
 OBJECTS_PATH = $(addprefix $(OBJECTS_DIR)/, $(OBJECTS_FILES))

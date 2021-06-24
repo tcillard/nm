@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 20:47:55 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/23 20:06:16 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/24 23:01:31 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct          s_symbolesList
     char                *value;
     char                type;
     struct s_symbolesList   *next;
+    struct s_symbolesList   *prev;
 }                       t_symbolesList;
 
 void            checkAndDisplayFileContent();
@@ -59,5 +60,6 @@ void            treatAndDisplaySymboles64();
 int		        ft_strcmp(const char *s1, const char *s2);
 t_symbolesList  *addAnElementToSymbolesList(char *name, char *value, char type, t_symbolesList *prev);
 void            freeSymbolesList(t_symbolesList *symbolesList);
-
+t_symbolesList  *sortSymbolesList(t_symbolesList *list);
+char            charToLower(char c);
 #endif

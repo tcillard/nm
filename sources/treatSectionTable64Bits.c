@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:02:41 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/23 20:08:30 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/24 23:09:04 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,6 @@ t_symbolesList  *treatSymboles(Elf64_Shdr *symbolesSection, Elf64_Shdr *strTabSe
             }
         }
     }
-    t_symbolesList *tmp = firstLink;
-    while (tmp) {
-        printf("%16s %c %s\n", tmp->value, tmp->type, tmp->name);
-        tmp = tmp->next;
-    }
     return firstLink;
 }    
 
@@ -90,4 +85,11 @@ void    treatAndDisplaySymboles64() {
         return ;
     }
     symbolesList = treatSymboles(symbolesSection, strTabSection);
+    t_symbolesList *tmp = symbolesList;
+    symbolesList = sortSymbolesList(symbolesList);
+    tmp = symbolesList;
+    while (tmp) {
+        printf("%16s %c %s\n", tmp->value, tmp->type, tmp->name);
+        tmp = tmp->next;
+    }
 }

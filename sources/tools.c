@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 16:08:55 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/23 18:25:02 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/24 16:36:33 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,11 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	}
 	cpy[i] = '\0';
 	return (cpy);
+}
+
+char    charToLower(char c) {
+    if (c >= 'A' && c <= 'Z') {
+        return c + 32;
+    }
+    return c;
 }
