@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 20:47:55 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/24 23:01:31 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/26 17:20:01 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct  s_elf
     Elf64_Ehdr  *elfHeader64;
     size_t      size;
     e_arch      arch;
+    short       endian;
 }               t_elf;
 
 typedef struct          s_symbolesList

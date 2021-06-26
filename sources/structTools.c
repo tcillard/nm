@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:08:40 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/21 18:11:27 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/26 17:20:35 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_elf   *initElfStruct() {
     elf->elfHeader32 = NULL;
     elf->elfHeader64 = NULL;
     elf->size = 0;
+    elf->endian = 0;
     return elf;
 }
 
