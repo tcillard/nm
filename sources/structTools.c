@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:08:40 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/26 17:20:35 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/27 17:14:41 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_elf   *initElfStruct() {
     return elf;
 }
 
-int    mapFileContentAndSaveInStruct(char *path) {
+boolean    mapFileContentAndSaveInStruct(char *path) {
     char        *file;
     struct stat stat;
     int         fd;
@@ -45,7 +45,7 @@ int    mapFileContentAndSaveInStruct(char *path) {
     close(fd);
     elf->size = stat.st_size;
     if (file[0] != 0x7f || file[1] != 'E' || file[2] != 'L' || file[3] != 'F')
-        return false;
+        return FALSE;
     if (file[4] == ELFCLASS32) {
         elf->elfHeader32 = (Elf32_Ehdr*) file;
         elf->arch = B_32;
@@ -53,7 +53,7 @@ int    mapFileContentAndSaveInStruct(char *path) {
         elf->elfHeader64 = (Elf64_Ehdr*) file;
         elf->arch = B_64;
     }
-    return true;
+    return TRUE;
 }
 
 void freeElfHeader() {

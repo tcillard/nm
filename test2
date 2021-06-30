@@ -1,65 +1,217 @@
-0000000000001166 T addAnElementToSymbolesList
-0000000000202010 B __bss_start
-00000000000010e1 T charToLower
-000000000000093b T checkAndDisplayFileContent
+64B
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 0
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 2
+0
+2 - 2
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 2
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 1
+0
+2 - 2
+0
+2 - 2
+0
+2 - 1
+0
+2 - 1
+0
+0000000000001909 D addAnElementToSymbolesList
+0000000000203010 B __bss_start
+0000000000001878 D charToLower
+000000000000097b D checkAndDisplayFileContent
                  U close@@GLIBC_2.2.5
-0000000000202020 b completed.7698
-0000000000000a75 T convertSymbolesValue
-0000000000001105 T createASymbolesListElement
+0000000000203020 b completed.7698
+0000000000000ada D convertSymbolesValue32
+0000000000000f93 D convertSymbolesValue64
+000000000000189c D createASymbolesListElement
                  w __cxa_finalize@@GLIBC_2.2.5
-0000000000202000 D __data_start
-0000000000202000 W data_start
-00000000000007d0 t deregister_tm_clones
-0000000000000997 T displaySectionTable32B
-0000000000000860 t __do_global_dtors_aux
-0000000000201d80 t __do_global_dtors_aux_fini_array_entry
-0000000000202008 D __dso_handle
-0000000000201d88 d _DYNAMIC
-0000000000202010 D _edata
-0000000000202040 b elf.3918
-0000000000202060 B _end
-0000000000001530 T _fini
-00000000000008a0 t frame_dummy
-0000000000201d78 t __frame_dummy_init_array_entry
-0000000000001a2c r __FRAME_END__
-0000000000000f07 T freeElfHeader
+0000000000203000 W data_start
+0000000000203000 D __data_start
+0000000000000810 d deregister_tm_clones
+00000000000008a0 d __do_global_dtors_aux
+0000000000202d78 ? __do_global_dtors_aux_fini_array_entry
+0000000000203008 D __dso_handle
+0000000000202d80 ? _DYNAMIC
+0000000000203010 D _edata
+0000000000203040 b elf.3928
+0000000000203060 B _end
+0000000000001d30 D _fini
+00000000000008e0 d frame_dummy
+0000000000202d70 ? __frame_dummy_init_array_entry
+000000000000237c d __FRAME_END__
                  U free@@GLIBC_2.2.5
-00000000000011e8 T freeSymbolesList
-0000000000001520 t fstat
-0000000000001520 T __fstat
-0000000000000f6f T ft_strcmp
-0000000000001000 T ft_strlen
-000000000000102e T ft_strmap
+000000000000169e D freeElfHeader
+000000000000198b D freeSymbolesList
+0000000000001d20 d fstat
+0000000000001d20 D __fstat
+0000000000001706 D ft_strcmp
+0000000000001797 D ft_strlen
+00000000000017c5 D ft_strmap
                  U __fxstat@@GLIBC_2.2.5
-0000000000000d18 T getFileStruct
-00000000000009a2 T getSectionByName
-0000000000201f78 d _GLOBAL_OFFSET_TABLE_
+00000000000014a5 D getFileStruct
+00000000000009ea D getSectionByName32
+0000000000000ec0 D getSectionByName64
+0000000000000b70 D getSymboleType32
+000000000000102d D getSymboleType64
+0000000000202f70 d _GLOBAL_OFFSET_TABLE_
                  w __gmon_start__
-0000000000001574 r __GNU_EH_FRAME_HDR
-0000000000000930 T handleElfErrors
-00000000000006d8 T _init
-0000000000201d80 t __init_array_end
-0000000000201d78 t __init_array_start
-0000000000000d25 T initElfStruct
-000000000000153c R _IO_stdin_used
+0000000000001dc4 d __GNU_EH_FRAME_HDR
+0000000000000970 D handleElfErrors
+0000000000000708 D _init
+0000000000202d78 ? __init_array_end
+0000000000202d70 ? __init_array_start
+00000000000014b2 D initElfStruct
+0000000000001d3c D _IO_stdin_used
                  w _ITM_deregisterTMCloneTable
                  w _ITM_registerTMCloneTable
-0000000000001510 T __libc_csu_fini
-00000000000014a0 T __libc_csu_init
+0000000000001d10 D __libc_csu_fini
+0000000000001ca0 D __libc_csu_init
                  U __libc_start_main@@GLIBC_2.2.5
-00000000000008aa T main
+00000000000008ea D main
                  U malloc@@GLIBC_2.2.5
-0000000000000d6f T mapFileContentAndSaveInStruct
+0000000000001506 D mapFileContentAndSaveInStruct
                  U mmap@@GLIBC_2.2.5
                  U munmap@@GLIBC_2.2.5
                  U open@@GLIBC_2.2.5
                  U printf@@GLIBC_2.2.5
-0000000000000810 t register_tm_clones
-0000000000001377 T sortSymbolesList
+                 U puts@@GLIBC_2.2.5
+0000000000000850 d register_tm_clones
+0000000000001bce D sortSymbolesList
                  U __stack_chk_fail@@GLIBC_2.4
-00000000000007a0 T _start
-0000000000001321 T symbolesListIsSorted
-0000000000001238 T symbolesNameCmp
-0000000000202010 D __TMC_END__
-0000000000000c57 T treatAndDisplaySymboles64
-0000000000000b0f T treatSymboles
+00000000000007e0 D _start
+0000000000001b45 D switchSymboleElements
+0000000000001ac4 D symbolesListIsSorted
+00000000000019db D symbolesNameCmp
+0000000000203010 D __TMC_END__
+0000000000000de5 D treatAndDisplaySymboles32
+00000000000013ca D treatAndDisplaySymboles64
+0000000000000c50 D treatSymboles32
+00000000000011ff D treatSymboles64

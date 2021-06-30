@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 18:39:48 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/24 23:08:25 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/06/27 17:29:30 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ t_symbolesList  *createASymbolesListElement() {
     if (!(symbolesList = (t_symbolesList*)malloc(sizeof(t_symbolesList)))) {
         return NULL;
     }
-    symbolesList->value = NULL;
+    symbolesList->valueHexa = NULL;
     symbolesList->name = NULL;
     symbolesList->type = 0;
     symbolesList->next = NULL;
     symbolesList->prev =  NULL;
+    symbolesList->valueDec = 0;
     return (symbolesList);
 }
 
@@ -32,7 +33,7 @@ t_symbolesList  *addAnElementToSymbolesList(char *name, char *value, char type, 
     if (!(newElement = createASymbolesListElement())) {
         return NULL;
     }
-    newElement->value = value;
+    newElement->valueHexa = value;
     newElement->name = name;
     newElement->type = type;
     newElement->prev = prev;
@@ -49,7 +50,7 @@ void            freeSymbolesList(t_symbolesList *symbolesList) {
 
     tmp = NULL;
     while (symbolesList) {
-        free(symbolesList->value);
+        free(symbolesList->valueHexa);
         tmp = symbolesList;
         symbolesList = symbolesList->next;
         free(tmp);
@@ -72,38 +73,49 @@ int             symbolesNameCmp(char *s1, char *s2) {
 	return (charToLower((unsigned char)s1[i]) - charToLower((unsigned char)s2[i]));
 }
 
-int             symbolesListIsSorted(t_symbolesList *list) {
+boolean             symbolesListIsSorted(t_symbolesList *list) {
+    int     ret;
+
+    ret = 0;
     while (list->next != NULL) {
-        if (symbolesNameCmp(list->name, list->next->name) > 0) {
-            return false;
+        ret = symbolesNameCmp(list->name, list->next->name);
+        if (ret > 0 || (ret == 0 && list->valueDec > list->next->valueDec)) {
+            return FALSE;
         }
         list = list->next;
     }
-    return true;
+    return TRUE;
+}
+
+void                    switchSymboleElements(t_symbolesList *list) {
+    t_symbolesList  *tmp;
+
+    tmp = list->next;
+    if (list->prev != NULL) {
+        list->prev->next = tmp; 
+    }
+    list->next = tmp->next;
+    tmp->prev = list->prev;
+    list->prev = tmp;
+    tmp->next = list;
+    if (list->next) {
+        list->next->prev = list;
+    }
 }
 
 t_symbolesList           *sortSymbolesList(t_symbolesList *list) {
-    t_symbolesList  *tmp;
+    int             ret;
 
-    tmp = NULL;
+    ret = 0;
     if (list == NULL) {
         return NULL;
     }
     list = list;
     while (!symbolesListIsSorted(list)) {
         while (list->next != NULL) {
-            if (symbolesNameCmp(list->name, list->next->name) > 0) {
-                tmp = list->next;
-                if (list->prev != NULL) {
-                    list->prev->next = tmp; 
-                }
-                list->next = tmp->next;
-                tmp->prev = list->prev;
-                list->prev = tmp;
-                tmp->next = list;
-                if (list->next) {
-                    list->next->prev = list;
-                }
+            ret = symbolesNameCmp(list->name, list->next->name);
+            if (ret > 0 || (ret == 0 && list->valueDec > list->next->valueDec)){
+                switchSymboleElements(list);
             }
             if (list->next != NULL) {
                 list = list->next;
