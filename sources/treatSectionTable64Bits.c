@@ -6,7 +6,7 @@
 /*   By: tcillard <tcillard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 17:02:41 by tcillard          #+#    #+#             */
-/*   Updated: 2021/06/30 22:47:06 by tcillard         ###   ########.fr       */
+/*   Updated: 2021/07/02 19:53:36 by tcillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ char        *convertSymbolesValue64(uint64_t value) {
 char getSymboleType64(Elf64_Sym sym)
 {
 	boolean local = ELF64_ST_BIND(sym.st_info) == STB_LOCAL;
-    printf("%i - %i\n", STB_WEAK, ELF64_ST_BIND(sym.st_info));
-    printf("%i\n", STB_LOCAL);
+    // printf("%i - %i\n", STB_WEAK, ELF64_ST_BIND(sym.st_info));
+    // printf("%i\n", STB_LOCAL);
     Elf64_Shdr  *sections = (Elf64_Shdr*) ((void*)getFileStruct()->elfHeader64 + getFileStruct()->elfHeader64->e_shoff);
     if (sym.st_shndx == SHN_ABS) {
         return local == TRUE ? 'a' : 'A';
